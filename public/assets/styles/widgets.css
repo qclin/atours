@@ -1,0 +1,12 @@
+.ui-widget{
+  font-family: inherit;
+  font-size: inherit;
+}
+
+
+form#booking{
+  object-fit: contain;
+  border-radius: 23px;
+  color: #000; 
+  background-image: linear-gradient(to bottom, #ffffff, #d8d8d8);
+}

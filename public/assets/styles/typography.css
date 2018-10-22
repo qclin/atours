@@ -1,0 +1,119 @@
+@font-face {
+  font-family: 'RelayWide-BoldItalic';
+    src: url('../fonts/RelayWide-BoldItalic/RelayWide-BoldItalic.eot');
+     src:  url('../fonts/RelayWide-BoldItalic/RelayWide-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/RelayWide-BoldItalic/RelayWide-BoldItalic.woff') format('woff'),
+        url('../fonts/RelayWide-BoldItalic/RelayWide-BoldItalic.ttf')  format('truetype'),
+        url('../fonts/RelayWide-BoldItalic/RelayWide-BoldItalic.svg#RelayWide-BoldItalic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face { font-family: 'Serpentine-MediumOblique';
+  src: url('../fonts/Serpentine-MediumOblique/Serpentine-MediumOblique.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Serpentine-MediumOblique/Serpentine-MediumOblique.otf') format('opentype'),
+    url('../fonts/Serpentine-MediumOblique/Serpentine-MediumOblique.woff') format('woff'),
+    url('../fonts/Serpentine-MediumOblique/Serpentine-MediumOblique.ttf') format('truetype'),
+    url('../fonts/Serpentine-MediumOblique/Serpentine-MediumOblique.svg#Serpentine-MediumOblique') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DINPro-Regular';
+      src:  url('../fonts/DINPro-Regular/DINPro-Regular.eot');
+     src:  url('../fonts/DINPro-Regular/DINPro-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/DINPro-Regular/DINPro-Regular.woff') format('woff'),
+        url('../fonts/DINPro-Regular/DINPro-Regular.ttf')  format('truetype'),
+        url('../fonts/DINPro-Regular/DINPro-Regular.svg#DINPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.logo{
+  font-family: 'Serpentine-MediumOblique';
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.mobile .logo{
+  letter-spacing: -3px;
+  font-size: 60px;
+  line-height: 0px;
+  z-index: 20;
+  position: absolute;
+  top: 45px;
+
+}
+
+.small-logo{
+  font-family: 'Serpentine-MediumOblique';
+  font-size: 40px;
+}
+
+.tagline{
+  font-family: 'DINPro-Regular';
+  font-size: 12px;
+  line-height: 17px;
+}
+
+.title, .menu-item{
+  font-family: 'DINPro-Regular';
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: initial;
+  letter-spacing: .6px;
+}
+
+/* header */
+header{
+  font-family: 'Serpentine-MediumOblique';
+  font-size: 18px;
+  line-height: 23px;
+}
+
+/* subheader */
+.subheader{
+  font-family: 'DINPro-Regular';
+  font-size: 18px;
+  line-height: 23px;
+}
+
+body{
+  font-family: 'DINPro-Regular';
+  font-size: 18px;
+  line-height: 23px;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  body{
+    font-family: 'DINPro-Regular';
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+}
+
+p{
+    font-family: 'DINPro-Regular';
+    font-size: 15px;
+    line-height: 20px;
+}
+p.block{
+  font-family: 'DINPro-Regular';
+  font-size: 12px;
+  line-height: 17px;
+}
+.main-text p{
+    font-family: 'Apercu-Light';
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: .5px;
+
+}
+caption, footer, .error-message{
+  font-family: 'DINPro-Regular';
+  font-size: 12px;
+  line-height: 17px;
+}

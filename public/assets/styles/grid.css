@@ -1,0 +1,37 @@
+/* Larger than mobile */
+@media (min-width: 320px) and (max-width: 767px){
+  #stickySide{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
+}
+
+
+/* Tablet */
+
+@media (min-width: 768px){
+
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1025px) {
+  .main-text{
+    max-width: 600px;
+  }
+}
