@@ -25,12 +25,14 @@ html
             h1 Your Flight Is Cancelled. 
             p (No further information is available.)
             p Your Flight Is Cancelled is a new e-flux project conceived by Julieta Aranda and Anton Vidokle. Part a bankrupt travel agency, part literally fiction, this itinerant installation and website speculate about a near future in which international movement of people, art and ideas grind to a halt. Beginning with a window display at NICC Brussels this fall, Your Flight Is Cancelled will appear in installments of short prose, images and video by a group of contributors including Brian Kuan Wood, Jörg Heisser, Kaye Cain-Nilesen, Benjamin Bratton, Yuk Hui, and many others.
-            
+        
         include subPages/destinations.pug
         include subPages/vacations.pug
         include subPages/offers.pug
     include partials/footer.pug
+    
 
     script.
           var imageUrls = !{JSON.stringify(imgFiles)}
     script(type='text/javascript', src='/scripts/nav.js')
+    script(type='text/javascript', src='/scripts/clickbait.js')

@@ -106,7 +106,7 @@ p.block{
   line-height: 17px;
 }
 .main-text p{
-    font-family: 'Apercu-Light';
+    font-family: 'DINPro-Regular';
     font-size: 18px;
     line-height: 24px;
     letter-spacing: .5px;
@@ -114,6 +114,6 @@ p.block{
 }
 caption, footer, .error-message{
   font-family: 'DINPro-Regular';
-  font-size: 12px;
+  font-size: 14px;
   line-height: 17px;
 }

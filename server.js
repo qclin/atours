@@ -24,7 +24,7 @@ var router = express.Router();
 app.use('/sayHello', router);
 router.post('/', mailer.sayHello);
 
-app.listen(3650, () => console.log('listening on 3000 '))
+app.listen(3650, () => console.log('listening on 3650 '))
 
 
 function getFiles (dir, files_){

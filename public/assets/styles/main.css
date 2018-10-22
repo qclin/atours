@@ -15,8 +15,6 @@
 
 body{
   margin: 0;
-  background-image: linear-gradient(to top, #01ff01, #000000 20%);
-  color: #fff;
 }
 
 a{
@@ -27,11 +25,58 @@ a{
 a:hover{
   /* color: inherit; */
 }
+.clickbait{
+  box-shadow: inset 1px 2px 6px 0 #b2b2b2;
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-align: center;
+  cursor: pointer;
+}
 
+.clickbait span{
+  top: 45%;
+  position: relative;
+}
+.round{
+  width: 10em;
+  height: 10em;
+  border-radius: 5em;
+  background-image: url("/images/stars-14613.png");
+}
+.bar{
+  width: 26em;
+  padding: .3em;
+  border-style: double;
+
+}
+.box{
+  width: 22em;
+  height: 9.167em;
+  border-style: ridge;
+
+}
 
 .logo-wrapper{
   text-align: center;
-  color: #fff;
-  border-bottom: 7px solid #fff;
-  background-image: linear-gradient(to bottom, #0000ff, #000000);
+}
+
+.divider{
+  width: 100%;
+  height: 5px;
+  background-image: linear-gradient(to right, #e100ff, #53a0fd 48%, #b4ec51);
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  color: #e10000;
+  height: 60px;
+  background-image: linear-gradient(to top, #01ff01, rgba(255, 255, 255, 0.85));
+  width: 100%;
+}
+
+footer marquee{
+  padding: 23px 0;
 }

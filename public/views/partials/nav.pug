@@ -1,13 +1,30 @@
 link(href='/styles/nav.css', rel='stylesheet')
   
 nav.fade-in-fast 
-  div.tab-container
-    a.tablink.menu-item#defaultOpen(href="#home" data-value="home") HOME
-  div.tab-container
-    a.tablink.menu-item#destinations-tab(href="#destinations" data-value="destinations") Destinations
-  div.tab-container
-    a.tablink.menu-item#vacations-tab(href="#vacations" data-value="vacations") Vacation Packages
-  div.tab-container
-    a.tablink.menu-item#offers-tab(href="#offers" data-value="offers") Deals & Offers
+  .tab-group 
+    div.tab-container
+      a.tablink.menu-item#defaultOpen(href="#home" data-value="home") HOME
+    div.tab-container
+      a.tablink.menu-item#destinations-tab(href="#destinations" data-value="destinations") Destinations
+    div.tab-container
+      a.tablink.menu-item#vacations-tab(href="#vacations" data-value="vacations") Vacation Packages
+  
+  .tab-group 
+    div.tab-container
+      a.tablink.menu-item#offers-tab(href="#offers" data-value="offers") Deals & Offers
+    div.tab-container
+      span.menu-item Extra Services 
+    
+  .tab-group 
+    div.tab-container
+      span.menu-item Partners
+    div.tab-container
+      span.menu-item Terms of Privacy
+    div.tab-container
+      span.menu-item Passport FAQ
+  
+  .tab-group
+    div.tab-container
+      span.menu-item Travel Loss
 span.navDot(onclick='toggleNav()')
 //- script(type='text/javascript', src='/scripts/nav.js')

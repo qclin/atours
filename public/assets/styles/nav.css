@@ -4,13 +4,12 @@ body.fixed{
 }
 
 .tab-container{
-  width: 12%;
   display: inline-block;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 2px 0 0 #ffffff;
-  background-color: #01ff01;
+  background-image: linear-gradient(to left, rgba(255, 254, 242, 0), #01ff01);
   border-radius: 6px;
-  margin: 8px;
-  padding: 8px;
+  margin: 4px 4px;
+  padding: 4px 8px;
 }
 
 .tab-container.open{
@@ -24,7 +23,10 @@ body.fixed{
 .tablink:hover {
   /* background-color: #777; */
 }
-
+.tab-group{
+  margin-right: 20px;
+  display: inline;
+}
 /* Style the tab content (and add height:100% for full page content) */
 
 .tabcontent {
@@ -42,7 +44,9 @@ body.fixed{
 button{
   background: transparent
 }
-
+span.menu-item{
+  cursor: pointer;
+}
 nav {
   box-sizing: border-box;
   width: calc(100% - 60px);
