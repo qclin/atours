@@ -17,7 +17,8 @@ app.set('view engine', 'pug');
 
 app.get('/', function(req, res){
 	var imgFiles = getFiles('./public/assets/images');
-	res.render('index', {imgFiles});
+	console.log('imgFiles ----- ', imgFiles);
+	res.render('index', { imgFiles });
 });
 
 var router = express.Router();

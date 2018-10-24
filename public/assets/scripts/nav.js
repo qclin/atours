@@ -46,6 +46,15 @@ if($(window).width() < 769){
     $(this).addClass('highlight')
   });
 
+  $('nav .tab-container span').click(function(){
+    $('#pageLeaf').addClass('slide-start')
+    setTimeout(function(){
+      $('#pageLeaf').removeClass('slide-start')
+      $('#pageLeaf').addClass('slide-finish')
+    }, 3000)
+  });
+
+
 });
 
 
