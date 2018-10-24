@@ -34,9 +34,9 @@ function getFiles (dir, files_){
         var name = dir + '/' + files[i];
         if (fs.statSync(name).isDirectory()){
             getFiles(name, files_);
-        } else if(!files[i].startsWith('.')) {
-						var cleanName = name.replace('./public/assets/', ' ')
-            files_.push(cleanName);
+        }else if(!files[i].startsWith('.')) {
+			var cleanName = name.replace('./public/assets/', ' ')
+        	files_.push(cleanName);
         }
     }
     return files_;
