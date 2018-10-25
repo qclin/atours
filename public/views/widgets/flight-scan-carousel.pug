@@ -1,0 +1,49 @@
+link(rel='stylesheet', href='./styles/widgets.css')
+#scan-carousel.row 
+    .one-third.column
+        img.carousel-thumb(src="./images/fillers/SI_DOC18.jpeg" onclick="openModal(); currentDiv(1)")
+    .one-third.column
+        img.carousel-thumb(src="./images/fillers/SI_DOC19.jpeg" onclick="openModal(); currentDiv(1)")
+    .one-third.column
+        img.carousel-thumb(src="./images/fillers/SI_DOC21.jpeg" onclick="openModal(); currentDiv(1)")
+        
+
+script.
+
+    function openModal() {
+        $('#myModal').style.display = "block";
+    }
+
+    function closeModal() {
+        $('#myModal').style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+
+    function currentDiv(n) {
+      showDivs(slideIndex = n);
+    }
+
+    function showDivs(n) {
+      var i;
+      var x = $(".mySlides");
+      var dots = $(".demo");
+      var captionText = $("#caption");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+
+      }
+      x[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " w3-opacity-off";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }

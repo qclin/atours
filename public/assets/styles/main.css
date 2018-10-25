@@ -159,3 +159,14 @@ footer marquee{
   width: 23em;
 
 }
+
+#waveform{
+    bottom: 0;
+    position: fixed;
+    width: 20%;
+    right: 5em;
+}
+
+#waveform canvas{
+    height: 128px;
+}

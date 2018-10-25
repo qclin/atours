@@ -10,10 +10,16 @@ Tunnel into instance
 
 Install necessary library
 `sudo yum intall git`
+
+Install NPM
+`curl --silent --location https://rpm.nodesource.com/setup_10.x | sudo bash -`
+check latest version
+`sudo yum -y install nodejs`
 `sudo yum install nodejs npm --enablerepo=epel`
 
 
- GITHUB 
+
+ GITHUB
 
 [Generating a new SSH key and adding it to the ssh-agent](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 

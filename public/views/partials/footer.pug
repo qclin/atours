@@ -1,2 +1,18 @@
 footer
   marquee Flight Deals:  Barcelona - Save up to 10%    /    Basel - Save up to 15%    /    Miami - Save up to 5%    /    Munich - Save up to 3%    /    Festival Pass Deals:  Ljubljana Triennial - Save up to 15%    /    Dakar Biennial - Save up to 15%    /    Basel - Save up to 15%
+  
+  
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js")
+  #waveform    
+  script.
+      var wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: '#D3D3D3',
+        progressColor: '#939393', 
+        cursorColor: '#ff00ff' 
+      });
+  
+      wavesurfer.load('./audio/soundplane.mp3');
+      wavesurfer.on('ready', function(){
+          wavesurfer.play(); 
+      });
