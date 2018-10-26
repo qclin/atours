@@ -109,6 +109,9 @@ a:hover{
 .logo-wrapper{
   text-align: center;
 }
+.logo-wrapper img{
+    height: 5em;
+}
 
 .divider{
   width: 100%;
