@@ -7,6 +7,7 @@ var fs = require('fs');
 var app = express();
 
 var mailer = require('./lib/mailer');
+var s3Bucket = require('./lib/s3bucket');
 
 app.use(cors());
 app.use(bodyParser.json({ extended: false }));
@@ -17,8 +18,14 @@ app.set('view engine', 'pug');
 
 app.get('/', function(req, res){
 	var imgFiles = getFiles('./public/assets/images');
-	console.log('imgFiles ----- ', imgFiles);
-	res.render('index', { imgFiles });
+
+	s3Bucket.getDirectoryFiles('website/').then((urls) =>{
+		var cleanUrls = urls.filter(Boolean);
+		var GCATGImages = cleanUrls.filter(url => url.indexOf('/images/') > -1);
+		var GCATGIVideos = cleanUrls.filter(url => url.indexOf('/video/') > -1);
+		console.log('------ ',GCATGImages, GCATGIVideos )
+		res.render('index', { GCATGImages, GCATGIVideos });
+	});
 });
 
 var router = express.Router();

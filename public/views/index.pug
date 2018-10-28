@@ -19,24 +19,23 @@ html
     html#pageLeaf
     include partials/header.pug
     include partials/nav.pug
-    include widgets/flightSelection.pug
-    section#content-wrapper.seven.columns
+    each url in GCATGImages
+      img(src=url)
+    p #{ imageUrls }
+    section#content-wrapper.row
       #content
-        div.tabcontent#home-page
-          .main-text.fade-in
-            h1 Your Flight Is Cancelled. 
-            p (No further information is available.)
-            p Your Flight Is Cancelled is a new e-flux project conceived by Julieta Aranda and Anton Vidokle. Part a bankrupt travel agency, part literally fiction, this itinerant installation and website speculate about a near future in which international movement of people, art and ideas grind to a halt. Beginning with a window display at NICC Brussels this fall, Your Flight Is Cancelled will appear in installments of short prose, images and video by a group of contributors including Brian Kuan Wood, Kaye Cain-Nielsen, Benjamin Bratton, Bruna Mori, Jörg Heiser, Chus Martínez, Ingo Niermann,  and others.
-        
+        include subPages/home.pug
         include subPages/destinations.pug
         include subPages/vacations.pug
         include subPages/offers.pug
-        include widgets/flight-scan-carousel.pug
+        include subPages/privacy.pug
+        include subPages/about.pug
+        //- include widgets/flight-scan-carousel.pug        
     //- include widgets/flightNoise.pug
     include partials/footer.pug
-    
-
     script.
-          var imageUrls = !{JSON.stringify(imgFiles)}
+        var imageUrls = !{JSON.stringify(GCATGImages)}
+        var videoUrls = !{JSON.stringify(GCATGIVideos)}
+          
     script(type='text/javascript', src='/scripts/nav.js')
     script(type='text/javascript', src='/scripts/clickbait.js')

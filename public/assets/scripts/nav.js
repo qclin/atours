@@ -1,7 +1,7 @@
 $(document).ready( function(){
   var link = location.hash
-  var subTabs = ['#home', '#destinations', '#vacation-packages', '#deals&offers']
-
+  var subTabs = ['#home', '#destinations', '#vacation', '#offers']
+  console.log("hey ---- ", link, subTabs.indexOf(link))
   setTimeout(function(){
     if(subTabs.indexOf(link) > -1){
       $(`[data-value=${link.substring(1)}]`).eq(0)[0].click();

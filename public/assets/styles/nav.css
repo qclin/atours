@@ -5,15 +5,15 @@ body.fixed{
 
 .tab-container{
   display: inline-block;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), inset 0 2px 0 0 #ffffff;
+  box-shadow: 3px 4px 5px 0 rgba(148, 148, 148, 0.5);
   background-image: linear-gradient(to left, rgba(255, 254, 242, 0), #01ff01);
-  border-radius: 6px;
   margin: 4px 4px;
   padding: 4px 8px;
 }
 
 .tab-container.open{
-  background-image: linear-gradient(to bottom, #ffffff, #feff01);
+  /* background-image: linear-gradient(to bottom, #ffffff, #feff01); */
+  background: #fff; 
 }
 
 .highlight{
