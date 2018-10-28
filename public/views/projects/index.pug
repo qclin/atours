@@ -10,32 +10,30 @@ html
     meta(name='og:description', content="Your Flight Is Cancelled is a new e-flux project conceived by Julieta Aranda and Anton Vidokle.")
 
     link(rel='shortcut icon', href='./images/Symbols/Place selection.png', type='image/x-icon') 
-    link(rel='stylesheet', href='./styles/main.css')
+    link(rel='stylesheet', href='../../styles/main.css')
     link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
     title Global Art Tours
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
   
-  body
-    include partials/header.pug
-    include partials/nav.pug
-    a(href="destinations/Costa-Rica_Bratton_Future" target="_blank") Costa Rica
-    each url in GCATGImages
-      img(src=url)
-    p #{ imageUrls }
-    section#content-wrapper.row
-      #content
-        include subPages/home.pug
-        include subPages/destinations.pug
-        include subPages/vacations.pug
-        include subPages/offers.pug
-        include subPages/privacy.pug
-        include subPages/about.pug
-        //- include widgets/flight-scan-carousel.pug        
-    //- include widgets/flightNoise.pug
-    include partials/footer.pug
-    script.
-        var imageUrls = !{JSON.stringify(GCATGImages)}
-        var videoUrls = !{JSON.stringify(GCATGIVideos)}
-          
-    script(type='text/javascript', src='/scripts/nav.js')
-    script(type='text/javascript', src='/scripts/clickbait.js')
+  body#projectPage
+    include ../partials/header.pug
+    include ../partials/nav.pug
+    .row
+      //- .backDrop
+      //-   img(src=visuals[0])
+      //-   .backDropBlur(style="")
+      #backDrop
+      #image-wrapper.one-third.column
+        span.locationTag #{ article.place}
+        each url in visuals
+          img(src=url)
+      #text-wrapper.two-thirds.column
+        h1 #{article.title}
+        span.author #{article.author}
+        p #{article.bodyText}
+      script.
+        var parsedUrls = !{JSON.stringify(visuals)}
+        $('#backDrop').css('background-image', 'url(' + parsedUrls[0] + ')');
+
+    
+    

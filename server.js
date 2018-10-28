@@ -8,6 +8,8 @@ var app = express();
 
 var mailer = require('./lib/mailer');
 var s3Bucket = require('./lib/s3bucket');
+var dbEntries = require('./lib/entries.json');
+
 
 app.use(cors());
 app.use(bodyParser.json({ extended: false }));
@@ -19,12 +21,22 @@ app.set('view engine', 'pug');
 app.get('/', function(req, res){
 	var imgFiles = getFiles('./public/assets/images');
 
-	s3Bucket.getDirectoryFiles('website/').then((urls) =>{
+	s3Bucket.getDirectoryFiles('GCATG/').then((urls) =>{
 		var cleanUrls = urls.filter(Boolean);
+		var GCATGAudio = cleanUrls.filter(url => url.indexOf('/audio/') > -1);
 		var GCATGImages = cleanUrls.filter(url => url.indexOf('/images/') > -1);
-		var GCATGIVideos = cleanUrls.filter(url => url.indexOf('/video/') > -1);
-		console.log('------ ',GCATGImages, GCATGIVideos )
-		res.render('index', { GCATGImages, GCATGIVideos });
+		var GCATGVideos = cleanUrls.filter(url => url.indexOf('/videos/') > -1);
+		res.render('index', { GCATGAudio, GCATGImages, GCATGVideos});
+	});
+});
+
+app.get('/destinations/:project', function(req, res){
+	var projectKey = req.params.project;
+	var projectText = dbEntries[projectKey];
+
+	s3Bucket.getDirectoryFiles(`projects/${projectKey}/`).then((urls) =>{
+		var cleanUrls = urls.filter(Boolean);
+		res.render('projects/index', { article: projectText, visuals: cleanUrls});
 	});
 });
 
