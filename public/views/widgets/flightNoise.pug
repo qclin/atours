@@ -1,16 +1,21 @@
 script(src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/1.2.3/wavesurfer.min.js")
 #waveform
-    
-
+  #rainbow-wrapper
+    button#playAudio play
+  
 script.
     var wavesurfer = WaveSurfer.create({
       container: '#waveform',
-      waveColor: 'red',
-      progressColor: 'purple'
+      waveColor: 'lightgrey',
+      progressColor: 'grey', 
+      cursorColor: 'lightgrey'
     });
 
     wavesurfer.load('./audio/soundplane.mp3');
     wavesurfer.on('ready', function(){
         wavesurfer.zoom(5);
-        wavesurfer.play(); 
+    });
+    
+    $('#playAudio').click(function(){
+      wavesurfer.playPause();
     });

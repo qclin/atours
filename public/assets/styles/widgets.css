@@ -5,17 +5,59 @@
 
 
 form#booking{
+  position: absolute;
+  top: 150px;
   object-fit: contain;
-  border-radius: 23px;
+  /* border-radius: 23px; */
   color: #000;
-  background-image: linear-gradient(to bottom, #ffffff, #d8d8d8);
+  /* background-image: linear-gradient(to bottom, #ffffff, #d8d8d8); */
+  margin-bottom: 80px;
+  background: #fff;
+  padding: 24px;
+  box-shadow: 0 0 8px 8px #fff;
+}
+select.full{
+  margin-bottom: 1em;
+  width: 150px;
+}
+select{
+  height: 25px;
 }
 
-
+input[type=text]{
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px 0 #00000080;
+  border: solid 1px #979797;
+  background-color: #ffffff;
+  height: 25px;
+  margin-bottom: .5em;
+}
+input[type=submit]{
+  margin: 1em;
+}
+.people-select{
+  width: 150px;
+}
+.mini-select{
+  display: inline-block;
+  margin-right: 25px;
+}
 .carousel-thumb{
     pointer: cursor;
 }
 
 .carousel-thumb:hover{
-    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19); 
+    box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+}
+
+.inline{
+  display: inline-block;
+}
+
+.chunk{
+  margin-bottom: 1.2em;
+}
+
+.chunk label{
+  margin-left: 7px;
 }

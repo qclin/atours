@@ -1,6 +1,7 @@
 @import url('jquery-ui-1.11.4/jquery-ui.css');
 @import url('skeleton/skeleton.css');
 @import url('./typography.css');
+@import url('animation.css');
 @import url('grid.css');
 @import url('images.css');
 @import url('widgets.css');
@@ -109,15 +110,17 @@ a:hover{
 }
 
 .logo-wrapper{
-  text-align: center;
+  margin-left: 22px;
+  margin-top: 14px;
 }
 .logo-wrapper img{
     height: 5em;
 }
 
 .divider{
-  width: 100%;
+  width: calc(100% - 44px);
   height: 5px;
+  margin: 22px;
   background-image: linear-gradient(to right, #e100ff, #53a0fd 48%, #b4ec51);
 }
 
@@ -166,12 +169,107 @@ footer marquee{
 }
 
 #waveform{
-    bottom: 0;
-    position: fixed;
-    width: 20%;
-    right: 5em;
+  width: 30%;
+  float: right;
+  margin: 36px;
 }
 
 #waveform canvas{
     height: 128px;
+}
+
+.filler-content{
+  position: relative;
+}
+
+.filler-content img{
+  width: 100%;
+}
+.filler-item{
+  position: relative;
+}
+
+.filler-item#cables{
+  width: 20%;
+  margin: 0 auto;
+  margin-left: 30%;
+}
+
+.filler-item#cables img{
+  position: absolute;
+}
+#cables div.frame{
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+
+}
+.drop{
+  box-shadow: inset 1px 2px 6px 0 #b2b2b2;
+  border: solid 1px #535353;
+  background-color: #ffffff;
+}
+div.frame{
+  top: 40px;
+  left: 12px;
+  z-index: -5;
+}
+
+div.frame:nth-of-type(2){
+  top: 56px;
+  left: 24px;
+  z-index: -6;
+}
+
+#flight-carousel{
+  height: 80px
+}
+
+#flight-carousel img{
+  height: 100%;
+  width: auto;
+  margin-left: 30px;
+}
+
+#train-video{
+  position: relative;
+  float: right;
+  box-shadow: inset 1px 2px 6px 0 #00000080;
+  border: solid 1px #979797;
+  padding: 12px;
+  margin: 2em;
+}
+#retroPlay{
+  position: absolute;
+  top: calc(50% - 38px);
+  left: calc(50% - 38px);
+  width: 76px;
+  height: 76px;
+  background-size: contain;
+  background-image: url('../icons/gray_play.png');
+  border: transparent;
+  cursor: pointer;
+}
+
+
+#rainbow-wrapper{
+  width: 100px;
+  box-shadow: inset 1px 2px 6px 0 #8bfd00;
+  border-style: solid;
+  border-width: 4px;
+  border-image-source: linear-gradient(to right, #3023ae, #53a0fd 48%, #ec51ad);
+  border-image-slice: 1;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+#playAudio{
+  width: 100%;
+  height: 34px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#flight-noise{
+  clear: both;
 }

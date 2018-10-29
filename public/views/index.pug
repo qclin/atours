@@ -18,24 +18,40 @@ html
   body
     include partials/header.pug
     include partials/nav.pug
-    a(href="destinations/Costa-Rica_Bratton_Future" target="_blank") Costa Rica
-    each url in GCATGImages
-      img(src=url)
-    p #{ imageUrls }
     section#content-wrapper.row
       #content
-        include subPages/home.pug
-        include subPages/destinations.pug
-        include subPages/vacations.pug
-        include subPages/offers.pug
-        include subPages/privacy.pug
-        include subPages/about.pug
-        //- include widgets/flight-scan-carousel.pug        
-    //- include widgets/flightNoise.pug
+        .announcement
+          .title Breaking News:
+            p 
+      .filler-content
+        .filler-item#cables 
+          - var cables = GCATGImages.filter(img => img.indexOf('runway') > -1); 
+          img.drop(src=cables[0])
+          div.frame.drop 
+          div.frame.drop 
+        .filler-item#train-video
+          - var trainVid = GCATGVideos.filter(vid => vid.indexOf('trains') > -1);
+          video(width="480" height="360")
+            source(src=trainVid[0])
+          button#retroPlay
+        .filler-item#flight-noise
+          include widgets/flightNoise.pug
+        .filler-item#flight-carousel
+          - var rollers = GCATGImages.filter(img => img.indexOf('/turbulence/') > -1); 
+          marquee
+            for roll in rollers 
+              img(src=roll)
+      
+      include subPages/home.pug
+      //- include subPages/destinations.pug
+      //- include subPages/vacations.pug
+      include subPages/offers.pug
+      - var cloudVid = GCATGVideos.filter(vid => vid.indexOf('clouds') > -1);
+      include subPages/services.pug
+      //- include subPages/privacy.pug
+      include subPages/about.pug
+      //- include widgets/flight-scan-carousel.pug        
     include partials/footer.pug
-    script.
-        var imageUrls = !{JSON.stringify(GCATGImages)}
-        var videoUrls = !{JSON.stringify(GCATGIVideos)}
           
     script(type='text/javascript', src='/scripts/nav.js')
     script(type='text/javascript', src='/scripts/clickbait.js')

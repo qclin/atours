@@ -40,3 +40,14 @@ var iconFiles = [
   "public/assets/icons/AHA-Soft/Time-Zones-disabled-icon.png",
   "public/assets/icons/AHA-Soft/Time-Zones-icon.png"
 ];
+
+$(document).ready(function(){
+  var domTrainVideo = $('#train-video video')[0];
+  $('#retroPlay').click(function(){
+      if(domTrainVideo.paused){
+        domTrainVideo.play();
+      }else{
+        domTrainVideo.pause();
+      }
+  });
+});

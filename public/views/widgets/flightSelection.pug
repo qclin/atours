@@ -4,42 +4,57 @@ script(src="/scripts/lib/jquery-timepicker-1.3.5/jquery.timepicker.min.js")
 link(rel='stylesheet', href="/scripts/lib/jquery-timepicker-1.3.5/jquery.timepicker.min.css")
 link(rel='stylesheet', href='./styles/widgets.css')
 
-.two.columns
-  header BOOK HERE
-  form#booking(action="/action_page.php")
-    fieldset
-      legend Select a Booking: 
-      label(for="flight")  Flights
-      input(type="checkbox" name="checkbox-1"  id="checkbox-flight")
-      label(for="festival") Festival Pass
-      input(type="checkbox" name="checkbox-2" id="checkbox-festival")
-      label(for="car") Cars
-      input(type="checkbox" name="checkbox-3" id="checkbox-car") 
-      
-    label(for="departLocation") Departing From
-    input(type="text" id="departL" name="departLocation" placeholder="City, landmark, or address ")
-    label(for="datepickerStart") Date: 
-    input(type="text" id="datepickerStart" class="datepicker")
-    label(for="timepickerStart") Time: 
-    input(type="text" id="timepickertStart" class="timepicker")
-      
-    label(for="arriveLocation") Going To 
-    input(type="text" id="arriveL" name="arriveLocation" placeholder="City, landmark, or address ")
-    label(for="datepickerEnd") Date: 
-    input(type="text" id="datepickerEnd" class="datepicker")
-    label(for="timepickerEnd") Time: 
-    input(type="text" id="timepickertEnd" class="timepicker")
-        
-    label(for="country") Country
-    select(id="country" name="country")
-      option(value="australia") Australia
-      option(value="canada") Canada
-      option(value="usa") USA
-    input(type="submit" value="Submit")
+form#booking(action="/action_page.php" autocomplete="off")
+  fieldset
+    label(for="project")  Select Destinations
+    select.full(id="project" name="project")
+      option( value selected disabled) Select Option
+      option(value="Costa-Rica_Bratton_Future") Costa Rica
+    - var optionRadio = ["Flight Only", "Festival Pass Only", "Car Only"];
+    - var comboRadio = ["Flight & Pass", "Flight & Pass & Car", "Flight & Car"];
+  
+    .chunk
+      for option in optionRadio 
+        .radioradio
+          input(type="radio" name=option value=option)
+          label(for=option).inline  #{option}
+    
+    .chunk
+      for option in comboRadio 
+        .radioradio
+          input(type="radio" name=option value=option)
+          label(for=option).inline  #{option}
+    
+  label(for="departLocation") Departing From
+  input(type="text" id="departL" name="departLocation" placeholder="City, landmark, or address ")
+
+    
+  label(for="arriveLocation") Going To 
+  input(type="text" id="arriveL" name="arriveLocation" placeholder="City, landmark, or address ")
+
+  label(for="datepickerStart") Depart Date: 
+  input(type="text" id="datepickerStart" class="datepicker")
+  label(for="timepickerStart") Time: 
+  input(type="text" id="timepickertStart" class="timepicker")
+  label(for="datepickerEnd") Return Date: 
+  input(type="text" id="datepickerEnd" class="datepicker")
+  label(for="timepickerEnd") Time: 
+  input(type="text" id="timepickertEnd" class="timepicker")
+    
+  - var people = ["adult", "senior", "child", "infant"]; 
+  .people-select
+    for one in people 
+      .mini-select
+        label(for=one) #{one}
+        select(id=one name=one).people 
+          option( value selected disabled) ---
+          - for (var x = 0; x < 10; x++)
+            option(value=x) #{x}
+  input(type="submit" value="Book Now")
 
 
-  script.
-    $(function(){
-      $("input.datepicker").datepicker(); 
-      $("input.timepicker").timepicker({ 'scrollDefault': 'now' }); 
-    });
+script.
+  $(function(){
+    $("input.datepicker").datepicker(); 
+    $("input.timepicker").timepicker({ 'scrollDefault': 'now' }); 
+  });

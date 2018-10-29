@@ -1,44 +1,56 @@
 #image-wrapper{
-
+  height: 100vh;
+  overflow: scroll;
 }
 
 #image-wrapper img{
-  width: 100%;
+  margin-left: 2em;
+  width: 80%;
   box-shadow: -3px 3px 6px 0 rgba(0, 0, 0, 0.5);
 }
-
+#text-wrapper{
+  margin-top: 4em;
+  padding: 48px 24px;
+  height: 70vh;
+  overflow: scroll;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 #00000080;
+}
+#scatterPlot{
+  z-index: -9;
+  position: fixed;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+#scatterPlot img{
+  width: 300px;
+  z-index: -8;
+  position: absolute;
+}
 #backDrop{
   z-index: -7;
   position: absolute;
   top:0;
   width: 100vw;
+  height: 100%;
+  opacity: 0.78;
+  background-color: rgba(255, 255, 255, 0.05);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+}
+#ovalGlow{
+  width: 100%;
   height: 100vh;
-  -webkit-filter: blur(15px);
-  -moz-filter: blur(15px);
-  -o-filter: blur(15px);
-  -ms-filter: blur(15px);
-  filter: blur(15px);
-}
-.backDrop{
-  z-index: -7;
-  position: fixed;
-}
-
-.backDrop img{
-  display: flex;
-}
-
-.backDropBlur{
-  position: fixed;
-  top:0;
-  width: 100vw;
-  height: 100vh;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  /* background-image: radial-gradient(circle at 50% 50%, #00cfff, rgba(193, 193, 193, 0)); */
+  position: absolute;
+  border-radius: 50%;
+  position: relative;
+  background: radial-gradient(#00cfff, #c1c1c100);
 }
 span.locationTag{
   position: fixed;

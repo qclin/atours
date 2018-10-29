@@ -26,6 +26,7 @@ app.get('/', function(req, res){
 		var GCATGAudio = cleanUrls.filter(url => url.indexOf('/audio/') > -1);
 		var GCATGImages = cleanUrls.filter(url => url.indexOf('/images/') > -1);
 		var GCATGVideos = cleanUrls.filter(url => url.indexOf('/videos/') > -1);
+
 		res.render('index', { GCATGAudio, GCATGImages, GCATGVideos});
 	});
 });
@@ -40,6 +41,11 @@ app.get('/destinations/:project', function(req, res){
 	});
 });
 
+
+app.get('/404/:type', function(req, res){
+	var errorType = req.params.type;
+	res.render(`404/${errorType}`);
+});
 var router = express.Router();
 app.use('/sayHello', router);
 router.post('/', mailer.sayHello);
