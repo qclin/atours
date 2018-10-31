@@ -26,8 +26,8 @@ app.get('/', function(req, res){
 		var GCATGAudio = cleanUrls.filter(url => url.indexOf('/audio/') > -1);
 		var GCATGImages = cleanUrls.filter(url => url.indexOf('/images/') > -1);
 		var GCATGVideos = cleanUrls.filter(url => url.indexOf('/videos/') > -1);
-
-		res.render('index', { GCATGAudio, GCATGImages, GCATGVideos});
+		var DestPreviews = cleanUrls.filter(url => url.indexOf('/previews/') > -1);
+		res.render('index', { GCATGAudio, GCATGImages, GCATGVideos, dbEntries, DestPreviews});
 	});
 });
 

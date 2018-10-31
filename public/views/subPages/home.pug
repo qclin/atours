@@ -1,4 +1,88 @@
 div.tabcontent#home-page
   include ../widgets/flightSelection.pug
-  .main-text.fade-in
-      
+  .announcement
+    .breaking-news
+      span.preview-tag Breaking News 
+      p Dear Art Lovers:
+      p We are saddened that after 25 years in business, Global Contemporary Art Tours Group, Inc., will shut down its operations in 2019. We deeply appreciate our loyal customers and are proud of having taken you to many wonderful and ground-breaking art exhibitions all around the globe: 
+    div.frame.drop
+  each article, key in dbEntries
+    a.destination-item(href=`destinations/${key}`)
+      span.preview-tag #{article.place}
+      - var previewUrls = DestPreviews.filter(img => img.indexOf(key) > -1); 
+      img.prevew-image(src=previewUrls[0])
+      .preview-text
+        h1 #{article.title}
+        p.author #{article.author}
+        - var snippetText = article.bodyText.substring(0, 140)
+        p #{snippetText}
+  - var tbaMedia = DestPreviews.filter(img => img.indexOf('TBA') > -1); 
+  .destination-tbas.tall
+    span.tba-tag NEW <br/> DESTINATION <br/> TBA
+    .tba-image-wrapper
+      img.tba-image(src=tbaMedia[0])
+    .tba-holder
+  .cancellation-posters
+    - var cancellations = GCATGImages.filter(img => img.indexOf('CANCEL_FLIGHTS') > -1);     
+    img#cancelled(src=cancellations[0])
+    - var n = 0;
+    while n < 4
+      div.frame.drop= n++
+  .filler-content
+    //- .filler-item#cables 
+    //-   - var cables = GCATGImages.filter(img => img.indexOf('runway') > -1); 
+    //-   img#cable-cover.drop(src=cables[0])
+    //-   div.frame.drop 
+    //-   div.frame.drop 
+    .stamps
+      div.ovalFlat
+        img.accent-md(src="./images/stamps/lightingstrike.gif")
+    .filler-item#train-video
+      - var trainVid = GCATGVideos.filter(vid => vid.indexOf('trains') > -1);
+      video
+        source(src=trainVid[0])
+      button#retroPlay
+    .filler-item#flight-noise
+      include ../widgets/flightNoise.pug
+    .filler-item#conference-carousel
+      marquee
+        img(src="./images/stock/conference/conference1.jpg")
+        img(src="./images/stock/conference/conference2.jpg")
+        img(src="./images/stock/conference/conference3.jpg")
+        img(src="./images/stock/conference/conference4.jpg")
+      .stars-banner
+        img(src="./images/stamps/shiny star.gif")
+        img(src="./images/stamps/shiny star.gif")
+        img(src="./images/stamps/shiny star.gif")
+        img(src="./images/stamps/shiny star.gif")
+        img(src="./images/stamps/shiny star.gif")
+
+    .filler-item#air-scanner
+      div.roundFrame
+        img(src="/images/fillers/clearairturbulence.jpg")
+    .destination-tbas.wide
+      span.tba-tag NEW <br/> DESTINATION <br/> TBA
+      .tba-image-wrapper
+        img.tba-image(src=tbaMedia[1])
+      .tba-holder
+.stamps
+  .flashPlugin
+    object(type="application/x-shockwave-flash" data="flash-file.swf" width="300" height="125")
+      param(name="movie" value="flash-file.swf")
+      param(name="quality" value="high")
+    img.accent.south-west(src="./images/Symbols/Airtickets.png")
+  img.safetyCard(src="./images/stamps/EMERGENCY-1-small.jpg")
+  div.oval#sleeper1
+    img(src="./images/stock/sleeper1.jpg")
+  .ovalTall
+    img(src="./images/stamps/venice fall 2.jpg")
+  div.oval#sleeper2
+    img(src="./images/stock/sleeper2.jpg")
+  div.fragile
+    img.accent-md(src="./images/stamps/fragile.png")
+    span.safe STAY SAFE: DON’T GO ANYWHERE!
+  script.
+    var ssGCATGImages = !{JSON.stringify(GCATGImages)} 
+  script(type='text/javascript', src='/scripts/home.js')
+
+  

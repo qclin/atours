@@ -1,0 +1,101 @@
+.stamps{
+  z-index: -1;
+}
+.flashPlugin{
+  top: 10%;
+  position: absolute;
+  right: 20%;
+  z-index: -1;
+}
+
+.safetyCard{
+  position: absolute;
+  width: 10%;
+  min-width: 175px;
+  left: 25%;
+  top: 40%;
+}
+
+.oval{
+  box-shadow: 3px -3px 6px 0 #ffff00;
+  border: solid 1px #979797;
+  width: 120px;
+  height: 63px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#sleeper1{
+  top: 120vh;
+  left: 50%;
+  position: absolute;
+}
+#sleeper2{
+  float: right;
+  margin-bottom: 5em;
+  margin-right: 5em;
+}
+.oval img{
+  width: 100%;
+  filter: grayscale(100%);
+}
+.oval img:hover{
+  filter: grayscale(0%);
+}
+.ovalFlat{
+  width: 122px;
+   height: 24px;
+   box-shadow: 0 2px 4px 0 #00000080;
+   background-image: radial-gradient(circle at 50% 50%, #d8fc00, #ffffff86);
+   border-radius: 50%;
+   position: relative;
+}
+
+div.ovalFlat img{
+  top: -2em;
+  position: absolute;
+  left: 1.35em;
+}
+
+.ovalTall{
+  border-radius: 50%;
+  width: 341px;
+   height: 227px;
+   overflow: hidden;
+   background-blend-mode: lighten;
+   background: radial-gradient(#000, #fff);
+}
+
+.ovalTall img{
+  width: 100%;
+}
+
+.accent{
+  width: 2.625em;
+  position: absolute;
+}
+
+.accent-md{
+  width: 4em !important;
+}
+
+.south-west{
+  left: -21px;
+  bottom: -21px;
+}
+
+#air-scanner{
+  right: 0;
+  position: absolute;
+}
+
+div.fragile{
+  margin: 0 auto;
+  width: 450px;
+}
+span.safe{
+  text-transform: uppercase;
+  color: #f00;
+  vertical-align: top;
+  margin-left: 40px;
+}

@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'TradeGothicLTStd-BoldExt';
+  src: url('TradeGothicLTStd-BoldExt.eot?#iefix') format('embedded-opentype'),  url('TradeGothicLTStd-BoldExt.otf')  format('opentype'),
+	     url('TradeGothicLTStd-BoldExt.woff') format('woff'), url('TradeGothicLTStd-BoldExt.ttf')  format('truetype'), url('TradeGothicLTStd-BoldExt.svg#TradeGothicLTStd-BoldExt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

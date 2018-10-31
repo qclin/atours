@@ -3,21 +3,22 @@
   font-size: inherit;
 }
 
-
 form#booking{
-  position: absolute;
-  top: 150px;
+  top: -42px;
+  position: relative;
+  width: 150px;
+  display: inline-block;
   object-fit: contain;
-  /* border-radius: 23px; */
   color: #000;
   /* background-image: linear-gradient(to bottom, #ffffff, #d8d8d8); */
   margin-bottom: 80px;
   background: #fff;
   padding: 24px;
+  padding-top: 0;
   box-shadow: 0 0 8px 8px #fff;
 }
 select.full{
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   width: 150px;
 }
 select{
@@ -33,7 +34,7 @@ input[type=text]{
   margin-bottom: .5em;
 }
 input[type=submit]{
-  margin: 1em;
+  margin: .5em;
 }
 .people-select{
   width: 150px;
@@ -55,7 +56,7 @@ input[type=submit]{
 }
 
 .chunk{
-  margin-bottom: 1.2em;
+  margin-bottom: 1em;
 }
 
 .chunk label{
