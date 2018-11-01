@@ -26,13 +26,17 @@ html
           img(src=url)
       #backDrop
         #ovalGlow
-      #image-wrapper.one-third.column
-        span.locationTag #{ article.place}
-        each url in visuals
-          img(src=url)
-      #text-wrapper.two-thirds.column
-        h1 #{article.title}
-        span.author #{article.author}
+      #image-wrapper
+        //- span.locationTag #{ article.place}
+        //- each url in visuals
+        //-   img(src=url)
+      #text-wrapper
+        .metatag 
+          .date-tag #{article.publish_date}
+          .full-location-tag #{article.place_long}
+        header 
+          .title #{article.title}
+          .author #{article.author}
         p #{article.bodyText}
       script.
         var parsedUrls = !{JSON.stringify(visuals)}

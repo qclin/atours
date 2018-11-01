@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'AcuminPro-ExtraLight';
+  src: url('AcuminPro-ExtraLight.eot?#iefix') format('embedded-opentype'),  url('AcuminPro-ExtraLight.otf')  format('opentype'),
+	     url('AcuminPro-ExtraLight.woff') format('woff'), url('AcuminPro-ExtraLight.ttf')  format('truetype'), url('AcuminPro-ExtraLight.svg#AcuminPro-ExtraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

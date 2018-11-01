@@ -40,6 +40,38 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'AcuminPro-Bold';
+      src:  url('../fonts/AcuminPro-Bold/AcuminPro-Bold.eot');
+     src:  url('../fonts/AcuminPro-Bold/AcuminPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminPro-Bold/AcuminPro-Bold.woff') format('woff'),
+        url('../fonts/AcuminPro-Bold/AcuminPro-Bold.ttf')  format('truetype'),
+        url('../fonts/AcuminPro-Bold/AcuminPro-Bold.svg#AcuminPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AcuminPro-ExtraLight';
+      src:  url('../fonts/AcuminPro-ExtraLight/AcuminPro-ExtraLight.eot');
+     src:  url('../fonts/AcuminPro-ExtraLight/AcuminPro-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminPro-ExtraLight/AcuminPro-ExtraLight.woff') format('woff'),
+        url('../fonts/AcuminPro-ExtraLight/AcuminPro-ExtraLight.ttf')  format('truetype'),
+        url('../fonts/AcuminPro-ExtraLight/AcuminPro-ExtraLight.svg#AcuminPro-ExtraLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AcuminPro-BoldItalic';
+      src:  url('../fonts/AcuminPro-BoldItalic/AcuminPro-BoldItalic.eot');
+     src:  url('../fonts/AcuminPro-BoldItalic/AcuminPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AcuminPro-BoldItalic/AcuminPro-BoldItalic.woff') format('woff'),
+        url('../fonts/AcuminPro-BoldItalic/AcuminPro-BoldItalic.ttf')  format('truetype'),
+        url('../fonts/AcuminPro-BoldItalic/AcuminPro-BoldItalic.svg#AcuminPro-BoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'TradeGothicLTStd-Extended';
@@ -175,4 +207,68 @@ form{
 .clickbait{
   font-family: 'AcuminPro-Regular';
   font-size: 20px;
+}
+
+.tilt-title{
+  transform: rotate(-12deg);
+  font-weight: bold;
+  line-height: 1.18;
+  letter-spacing: 0.6px;
+  font-family: 'AcuminPro-Regular';
+  font-size: 40px;
+  font-weight: 300;
+  text-shadow: -2px 2px 4px #00000080;
+  position: absolute;
+  color: #fff;
+}
+
+.modal-text p,
+#about-page .main-text{
+  font-family: 'AcuminPro-Regular';
+  font-size: 1.3em;
+  line-height: 30px;
+  letter-spacing: 0.1px;
+  box-shadow: 0 2px 4px 0 rgba(0 0 0, 0.5);
+  background-color: #ffffff;
+}
+
+span.preview-tag,
+span.tba-tag{
+  font-family: 'AcuminPro-BoldItalic';
+  font-size: 40px;
+  text-shadow: 0 2px 4px #00000080;
+  line-height: 1.18;
+  letter-spacing: 0.6px;
+}
+
+#projectPage .metatag{
+  font-family: 'AcuminPro-Bold';
+  /* todo: update fonts */
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.58;
+  letter-spacing: 0.4px;
+  color: #4a4a4a;
+}
+
+#projectPage .title{
+  font-family: 'AcuminPro-Bold';
+  font-size: 40px;
+  letter-spacing: 0.3px;
+  color: #4a4a4a;
+}
+#projectPage .author{
+  font-family: 'AcuminPro-ExtraLight';
+  font-size: 40px;
+  letter-spacing: 0.3px;
+  color: #4a4a4a;
+}
+
+#projectPage p{
+  font-family: 'AcuminPro-ExtraLight';
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: .1px;
 }

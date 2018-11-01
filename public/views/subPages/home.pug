@@ -1,7 +1,7 @@
 div.tabcontent#home-page
   include ../widgets/flightSelection.pug
   .announcement
-    .breaking-news
+    .breaking-news#breaking
       span.preview-tag Breaking News 
       p Dear Art Lovers:
       p We are saddened that after 25 years in business, Global Contemporary Art Tours Group, Inc., will shut down its operations in 2019. We deeply appreciate our loyal customers and are proud of having taken you to many wonderful and ground-breaking art exhibitions all around the globe: 
@@ -65,22 +65,23 @@ div.tabcontent#home-page
       .tba-image-wrapper
         img.tba-image(src=tbaMedia[1])
       .tba-holder
-.stamps
-  .flashPlugin
-    object(type="application/x-shockwave-flash" data="flash-file.swf" width="300" height="125")
-      param(name="movie" value="flash-file.swf")
-      param(name="quality" value="high")
-    img.accent.south-west(src="./images/Symbols/Airtickets.png")
-  img.safetyCard(src="./images/stamps/EMERGENCY-1-small.jpg")
-  div.oval#sleeper1
-    img(src="./images/stock/sleeper1.jpg")
-  .ovalTall
-    img(src="./images/stamps/venice fall 2.jpg")
-  div.oval#sleeper2
-    img(src="./images/stock/sleeper2.jpg")
-  div.fragile
-    img.accent-md(src="./images/stamps/fragile.png")
-    span.safe STAY SAFE: DON’T GO ANYWHERE!
+  .stamps
+    .flashPlugin
+      object(type="application/x-shockwave-flash" data="flash-file.swf" width="300" height="125")
+        param(name="movie" value="flash-file.swf")
+        param(name="quality" value="high")
+      img.accent.south-west(src="./images/Symbols/Airtickets.png")
+    img.safetyCard(src="./images/stamps/EMERGENCY-1-small.jpg")
+    div.oval#sleeper1
+      img(src="./images/stock/sleeper1.jpg")
+    .ovalTall
+      .tallInside
+    div.oval#sleeper2
+      img(src="./images/stock/sleeper2.jpg")
+    div.fragile
+      img.accent-md(src="./images/stamps/fragile.png")
+      span.safe STAY SAFE: DON’T GO ANYWHERE!
+
   script.
     var ssGCATGImages = !{JSON.stringify(GCATGImages)} 
   script(type='text/javascript', src='/scripts/home.js')

@@ -63,7 +63,16 @@ div.ovalFlat img{
    height: 227px;
    overflow: hidden;
    background-blend-mode: lighten;
-   background: radial-gradient(#000, #fff);
+   /* filter: blur(3px); */
+   box-shadow: inset 0px 0px 40px 40px #fff;
+
+}
+.tallInside{
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 40px 40px #fff;
+  background-image: url("../images/stamps/venice fall 2.jpg");
+  background-size: contain;
 }
 
 .ovalTall img{

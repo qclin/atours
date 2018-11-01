@@ -6,11 +6,13 @@ body.fixed{
 .tab-container{
   display: inline-block;
   box-shadow: 3px 4px 5px 0 rgba(148, 148, 148, 0.5);
-  background-image: linear-gradient(to left, rgba(255, 254, 242), #01ff01);
+  background-color: #f8e71c;
   margin: 4px 4px;
   padding: 4px 8px;
 }
-
+.errorPage .tab-container{
+  background-image: linear-gradient(to left, rgba(255, 254, 242), #01ff01);
+}
 .tab-container.open{
   /* background-image: linear-gradient(to bottom, #ffffff, #feff01); */
   background: #fff;

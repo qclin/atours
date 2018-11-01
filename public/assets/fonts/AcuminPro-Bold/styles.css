@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'AcuminPro-Bold';
+  src: url('AcuminPro-Bold.eot?#iefix') format('embedded-opentype'),  url('AcuminPro-Bold.otf')  format('opentype'),
+	     url('AcuminPro-Bold.woff') format('woff'), url('AcuminPro-Bold.ttf')  format('truetype'), url('AcuminPro-Bold.svg#AcuminPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

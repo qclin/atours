@@ -1,4 +1,4 @@
-.modal-layer{
+/* .modal-layer{
   position: absolute;
   z-index: 5;
   top: 0;
@@ -16,4 +16,66 @@
   z-index: 25;
   position: fixed;
   right: 0;
+} */
+.modal span.preview-tag{
+  top: 12%;
+  left: 20%;
+  z-index: -1;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-image: radial-gradient(circle at 50% 50%, #00cfff, #c1c1c100 50%);
+}
+.blurBack{
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  z-index: 3;
+}
+/* Modal Content/Box */
+.modal-content {
+    box-shadow: 0 2px 4px 0 #00000080;
+    background-color: #fefefe;
+    margin: 11% auto;
+    width: 80%;
+    max-width: 650px;
+    height: 65%;
+    position: relative;
+    padding: 25px;
+}
+.modal-text{
+  overflow-y: scroll;
+  height: 100%;
+}
+.modal-content img.banner{
+  width: 100%;
+}
+.north-east{
+  top: -1.3125em;
+  right: -1.3125em;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -1,6 +1,7 @@
 $(document).ready( function(){
   var link = location.hash
-  var subTabs = ['#home', '#destinations', '#vacation', '#offers']
+  var subTabs = ['#home', '#destinations', '#vacation', '#offers', '#service', '#partners', '#privacy', '#faq', '#about'];
+  
   console.log("hey ---- ", link, subTabs.indexOf(link))
   setTimeout(function(){
     if(subTabs.indexOf(link) > -1){

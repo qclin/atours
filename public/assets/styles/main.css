@@ -23,6 +23,20 @@ body{
   margin: 0;
   overflow-x: hidden;
 }
+
+body.modal-open{
+  overflow: hidden;
+}
+body.modal-open nav .tab-group {
+  opacity: 0;
+}
+body.modal-open header{
+  filter: blur(5px);
+}
+
+body.modal-open #content-wrapper{
+  filter: blur(5px);
+}
 #pageLeaf::before{
   content: '';
   -webkit-transform: translateX(-400vw);
@@ -362,17 +376,19 @@ div.frame:nth-of-type(2){
 
 span.preview-tag,
 span.tba-tag{
-  transform: rotate(-12deg);
-  text-shadow: 0 2px 4px #00000080;
-  font-family: 'TradeGothicLTStd-Extended';
-  font-size: 40px;
+  /* transform: rotate(-12deg); */
   color: #ffffff;
   position: absolute;
-  z-index: 2;
-  line-height: 1.18;
-  letter-spacing: 0.6px;
 }
-
+span.tba-tag{
+  z-index: 2;
+}
+span.preview-tag{
+  z-index: -2;
+  top: -0.7em;
+  left: -2em;
+  text-transform: uppercase;
+}
 a:hover h1{
   color: initial;
 }
@@ -390,6 +406,11 @@ a:hover h1{
 @media screen and (min-width: 1400px) {
   .destination-item:first-of-type {
     right: 20%;
+  }
+
+  .tilt-title{
+    left: 20%;
+    top: 21%;
   }
 }
 
@@ -492,7 +513,26 @@ img#cancelled{
   box-sizing: border-box;
 }
 
-.breaking-news span.preview-tag{
-  top: -.2em;
-  text-transform: uppercase;
+
+#breaking{
+   cursor: pointer;
+}
+.tug{
+  z-index: -1;
+}
+.center{
+  text-align: center;
+}
+
+#about-page{
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+#about-page .main-text{
+  margin: 6% auto;
+  padding: 25px;
+}
+
+.aboutPage{
+  background-image: radial-gradient(circle at 50% 50%, #00cfff, #c1c1c100 65%);
 }

@@ -9,8 +9,11 @@
   box-shadow: -3px 3px 6px 0 rgba(0, 0, 0, 0.5);
 }
 #text-wrapper{
+  width: 70%;
+  box-sizing: border-box;
+  margin: 0 auto;
   margin-top: 4em;
-  padding: 48px 24px;
+  padding: 24px 10%;
   height: 70vh;
   overflow: scroll;
   background: #fff;
@@ -61,4 +64,18 @@ span.locationTag{
   line-height: 1.18;
   letter-spacing: 0.6px;
   color: #ffffff;
+}
+
+.metatag div{
+  display: inline-block;
+}
+.metatag{
+  margin-bottom: 62px;
+}
+#projectPage header{
+  margin-bottom: 30px;
+}
+
+.full-location-tag{
+  float: right;
 }
