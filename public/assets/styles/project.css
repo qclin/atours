@@ -53,7 +53,7 @@
   position: absolute;
   border-radius: 50%;
   position: relative;
-  background: radial-gradient(#00cfff, #c1c1c100);
+  background: radial-gradient(#00cfff, #c1c1c100 50%);
 }
 span.locationTag{
   position: fixed;
@@ -83,7 +83,9 @@ span.locationTag{
   height: 380px;
   width: 100%;
   overflow: hidden;
-  vertical-align: center; 
+  vertical-align: center;
+  margin-bottom: 60px;
+  margin-top: 30px;
 }
 
 #projectPage .image-wrapper img{

@@ -1,24 +1,29 @@
 $(document).ready( function(){
   var link = location.hash
   var subTabs = ['#home', '#destinations', '#vacation', '#offers', '#service', '#partners', '#privacy', '#faq', '#about'];
-  
-  console.log("hey ---- ", link, subTabs.indexOf(link))
-  setTimeout(function(){
-    if(subTabs.indexOf(link) > -1){
-      $(`[data-value=${link.substring(1)}]`).eq(0)[0].click();
-    }else{
-      setTimeout(openTab, 1000);
-    }
-}, 1000);
 
-// Logo transition
-if($(window).width() < 769){
-    $("h1.flat-link.logo a").animate({'opacity': 0}, 1000,function() {
-      $(this).text("GCATG");
-  }).animate({'opacity': 1}, 30);
-}
+  if(location.pathname == '/'){
+    setTimeout(function(){
+        if(subTabs.indexOf(link) > -1){
+          $(`[data-value=${link.substring(1)}]`).eq(0)[0].click();
+        }else{
+          setTimeout(openTab, 1000);
+        }
+      }, 1000);
+  }
+
+
+
+// // Logo transition
+// if($(window).width() < 769){
+//     $("h1.flat-link.logo a").animate({'opacity': 0}, 1000,function() {
+//       $(this).text("GCATG");
+//   }).animate({'opacity': 1}, 30);
+// }
 
   $('.tablink').click(function(){
+
+    // debugger;
     $('.tabcontent').hide();
     $('.tab-container').removeClass('open');
     $(this).parent('.tab-container').addClass('open');
@@ -31,11 +36,14 @@ if($(window).width() < 769){
     $('body').removeClass(`${leavePage}Page`);
     $('body').addClass(`${pageName}Page`);
 
+    if(location.pathname != '/'){
+      window.location = `/#${pageName}`
+    }
     $(`#${pageName}-page`).show();
 
-    if($(window).width() < 769){
-      $(window).scrollTop(0);
-    }
+    // if($(window).width() < 769){
+    //   $(window).scrollTop(0);
+    // }
   });
 
   $('body').on('click', '.open-popup', function () {

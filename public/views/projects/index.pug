@@ -16,6 +16,12 @@ html
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js')
   
   body#projectPage
+    header.logo-wrapper.desktop 
+        a(href="/") 
+            img(src="../icons/GCATG-3-Light Blue.svg")
+    header.logo-wrapper.mobile 
+        a(href="/") 
+            img(src="../icons/GCATG-3-Light Blue.svg")
     include ../partials/nav.pug
     .row
       //- .backDrop
@@ -32,18 +38,19 @@ html
         //-   img(src=url)
       #text-wrapper
         .metatag 
-          .date-tag #{article.publish_date}
+          - var parsedDate = new Date(article.publish_date)
+          .date-tag #{parsedDate}
           .full-location-tag #{article.place_long}
         header 
           .title #{article.title}
           .author #{article.author}
         - var counter = 0; 
         each para, index in article.bodyText
-          p #{para} 
           if index%2 == 0 && visuals[counter] 
             .image-wrapper
               img(src=visuals[counter])
-            =counter++
+            .hide=counter++
+          p #{para} 
       script.
         var parsedUrls = !{JSON.stringify(visuals)}
         //- $('#scatterPlot').css('background-image', 'url(' + parsedUrls[0] + ')');

@@ -125,11 +125,10 @@
 }
 
 .title, .menu-item{
-  font-family: 'AcuminPro-Regular';
+  font-family: 'AcuminPro-ExtraLight';
   font-size: 12px;
   text-transform: uppercase;
   line-height: initial;
-  letter-spacing: .6px;
 }
 
 /* header */
@@ -180,12 +179,11 @@ p.block{
 }
 caption, footer, .error-message{
   font-family: 'AcuminPro-Regular';
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 12px;
 }
 
 form{
-  font-family: 'AcuminPro-Regular';
+  font-family: 'AcuminPro-ExtraLight';
   font-size: 12px;
 }
 
@@ -195,18 +193,42 @@ form{
   font-weight: normal;
 }
 
-.breaking-news p,
+.breaking-news a,
 .preview-text p{
-  font-family: 'AcuminPro-Regular';
-  font-size: 12px;
+  font-size: 15px;
   line-height: 1.58;
   letter-spacing: 0.4px;
   color: #4a4a4a;
 }
 
+.preview-text p{
+  font-family: 'AcuminPro-Regular';
+}
+.breaking-news a{
+  font-family: 'AcuminPro-ExtraLight';
+  color: #00f;
+  text-decoration: underline;
+}
+
+.breaking-news{
+  color: #00f;
+}
+
+.preview-text .title,
+.preview-text .author,
+.breaking-news .title{
+  font-family: 'AcuminPro-Regular';
+  font-size: 40px;
+  letter-spacing: 0.1px;
+  margin: 0;
+  white-space: nowrap;
+
+}
+
 .clickbait{
   font-family: 'AcuminPro-Regular';
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 24px;
 }
 
 .tilt-title{
