@@ -26,7 +26,7 @@ html
           img(src=url)
       #backDrop
         #ovalGlow
-      #image-wrapper
+      //- #image-wrapper
         //- span.locationTag #{ article.place}
         //- each url in visuals
         //-   img(src=url)
@@ -37,7 +37,13 @@ html
         header 
           .title #{article.title}
           .author #{article.author}
-        p #{article.bodyText}
+        - var counter = 0; 
+        each para, index in article.bodyText
+          p #{para} 
+          if index%2 == 0 && visuals[counter] 
+            .image-wrapper
+              img(src=visuals[counter])
+            =counter++
       script.
         var parsedUrls = !{JSON.stringify(visuals)}
         //- $('#scatterPlot').css('background-image', 'url(' + parsedUrls[0] + ')');

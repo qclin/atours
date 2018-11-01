@@ -79,3 +79,13 @@ span.locationTag{
 .full-location-tag{
   float: right;
 }
+#projectPage .image-wrapper{
+  height: 380px;
+  width: 100%;
+  overflow: hidden;
+  vertical-align: center; 
+}
+
+#projectPage .image-wrapper img{
+  width: 100%;
+}
