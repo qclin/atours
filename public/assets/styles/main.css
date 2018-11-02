@@ -155,10 +155,10 @@ a:hover{
 }
 .logo-wrapper{
   margin-left: 22px;
-  margin-top: 14px;
+  margin-top: 22px;
 }
 .logo-wrapper img{
-    height: 5em;
+    height: 3.5em;
 }
 
 .divider{
@@ -391,7 +391,7 @@ div.frame:nth-of-type(2){
 
 span.preview-tag,
 span.tba-tag{
-  /* transform: rotate(-12deg); */
+  transform: rotate(-12deg);
   color: #ffffff;
   position: absolute;
 }

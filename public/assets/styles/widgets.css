@@ -4,7 +4,7 @@
 }
 
 form#booking{
-  float: left; 
+  float: left;
   width: 150px;
   display: inline-block;
   object-fit: contain;
@@ -12,7 +12,6 @@ form#booking{
   /* background-image: linear-gradient(to bottom, #ffffff, #d8d8d8); */
   margin-bottom: 80px;
   background: #fff;
-  padding: 24px;
   padding-top: 0;
   box-shadow: 0 0 8px 8px #fff;
 }

@@ -96,7 +96,6 @@
 .title, .menu-item{
   font-family: 'AcuminPro-ExtraLight';
   font-size: 12px;
-  text-transform: uppercase;
   line-height: initial;
 }
 
@@ -154,6 +153,7 @@ caption, footer, .error-message{
 form{
   font-family: 'AcuminPro-ExtraLight';
   font-size: 12px;
+  line-height: 20px;
 }
 
 .preview-text h1{
@@ -165,13 +165,12 @@ form{
 .breaking-news a,
 .preview-text p{
   font-size: 15px;
-  line-height: 1.58;
   letter-spacing: 0.4px;
   color: #4a4a4a;
 }
 
 .preview-text p{
-  font-family: 'AcuminPro-Regular';
+  font-family: 'AcuminPro-ExtraLight';
 }
 .breaking-news a{
   font-family: 'AcuminPro-ExtraLight';
@@ -197,16 +196,16 @@ form{
 .clickbait{
   font-family: 'AcuminPro-Regular';
   font-size: 15px;
-  line-height: 24px;
+  line-height: 25px;
 }
 
 .tilt-title{
   transform: rotate(-12deg);
   font-weight: bold;
-  line-height: 1.18;
   letter-spacing: 0.6px;
   font-family: 'AcuminPro-Regular';
   font-size: 40px;
+  line-height: 40px;
   font-weight: 300;
   text-shadow: -2px 2px 4px #00000080;
   position: absolute;
@@ -228,8 +227,8 @@ span.tba-tag{
   font-family: 'AcuminPro-BoldItalic';
   font-size: 40px;
   text-shadow: 0 2px 4px #00000080;
-  line-height: 1.18;
   letter-spacing: 0.6px;
+  line-height: 40px;
 }
 
 #projectPage .metatag{
@@ -239,7 +238,6 @@ span.tba-tag{
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.58;
   letter-spacing: 0.4px;
   color: #4a4a4a;
 }
@@ -260,6 +258,6 @@ span.tba-tag{
 #projectPage p{
   font-family: 'AcuminPro-ExtraLight';
   font-size: 18px;
-  line-height: 24px;
+  line-height: 25px;
   letter-spacing: .1px;
 }
