@@ -39,7 +39,12 @@ html
       #text-wrapper
         .metatag 
           - var parsedDate = new Date(article.publish_date)
-          .date-tag #{parsedDate}
+
+          //- -var date = parsedDate.getDate();
+          //- -var month = parsedDate.getMonth(); //Be careful! January is 0 not 1
+          //- -var year = parsedDate.getFullYear();
+          //- -var dateString = date + "-" +(month + 1) + "-" + year;
+          .date-tag #{parsedDate} 
           .full-location-tag #{article.place_long}
         header 
           .title #{article.title}
@@ -51,6 +56,7 @@ html
               img(src=visuals[counter])
             .hide=counter++
           p #{para} 
+      footer
       script.
         var parsedUrls = !{JSON.stringify(visuals)}
         //- $('#scatterPlot').css('background-image', 'url(' + parsedUrls[0] + ')');

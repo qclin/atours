@@ -14,7 +14,7 @@ $(document).ready(function(){
     //- var randTime = Math.floor(Math.random() *  (3000 - 500)) + 500;
     //- console.log(randTime);
     $('img#cancelled').attr('src', cancellations[randIndx]);
-  }, 10000);
+  }, 1000);
 
 
   // frames offset

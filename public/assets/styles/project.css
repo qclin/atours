@@ -9,11 +9,12 @@
   box-shadow: -3px 3px 6px 0 rgba(0, 0, 0, 0.5);
 }
 #text-wrapper{
-  width: 70%;
+  max-width: 1024px; 
+  width: 80%;
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 1em;
-  padding: 60px;
+  padding: 60px 120px;
   height: 72vh;
   overflow: scroll;
   background: #fff;
