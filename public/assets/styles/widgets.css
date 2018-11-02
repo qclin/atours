@@ -4,8 +4,7 @@
 }
 
 form#booking{
-  top: -42px;
-  position: relative;
+  float: left; 
   width: 150px;
   display: inline-block;
   object-fit: contain;

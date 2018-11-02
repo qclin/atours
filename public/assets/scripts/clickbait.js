@@ -2,7 +2,7 @@
     // vary size for fun
     var link = location.hash
     if(link !== "#home") return;
-    
+
     var divsize = ((Math.random()*300) + 50).toFixed();
     var color = '#'+ Math.round(0xffffff * Math.random()).toString(16);
     var promoText = [ "BIENNALES- SAVE UP TO 10% \n\r TRIENNALES SAVE UP TO 15% \n\r FESTIVALS DISCOUNTS 5%",];

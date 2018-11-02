@@ -9,11 +9,9 @@
 }
 
 .safetyCard{
-  position: absolute;
-  width: 10%;
   min-width: 175px;
-  left: 25%;
-  top: 40%;
+  width: 50%;
+  position: relative;
 }
 
 .oval{
@@ -24,16 +22,17 @@
   border-radius: 50%;
   overflow: hidden;
 }
-
-#sleeper1{
-  top: 120vh;
-  left: 50%;
+.stargalaxy{
   position: absolute;
+  left: 0;
+  top: -100px;
+}
+#sleeper1{
+  margin:3em auto;
 }
 #sleeper2{
   float: right;
-  margin-bottom: 5em;
-  margin-right: 5em;
+  margin-top: 10em;
 }
 .oval img{
   width: 100%;
@@ -49,6 +48,7 @@
    background-image: radial-gradient(circle at 50% 50%, #d8fc00, #ffffff86);
    border-radius: 50%;
    position: relative;
+   margin: 0 auto;
 }
 
 div.ovalFlat img{
@@ -107,4 +107,36 @@ span.safe{
   color: #f00;
   vertical-align: top;
   margin-left: 40px;
+}
+
+.flag{
+  text-align: center;
+}
+.flag img {
+  margin: 3em auto;
+}
+
+.stacked{
+  position: relative;
+  height: 300px;
+  left: -5em;
+}
+
+.stacked .ovalTall,
+.stacked div.fragile {
+  position: absolute;
+}
+
+#red-arrow{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  position: absolute;
+  top: 0;
+  right: 3em;
+}
+
+#yellow-arrow{
+  position: absolute;
+  left: 0;
+  top: -3em;
 }
