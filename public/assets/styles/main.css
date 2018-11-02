@@ -538,3 +538,23 @@ img#cancelled{
 .aboutPage{
   background-image: radial-gradient(circle at 50% 50%, #00cfff, #c1c1c100 65%);
 }
+#services-page{
+  height: 100%;
+}
+#services-page video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+body.error404 nav{
+  z-index: 2;
+  position: relative;
+}
+body.error404 header{
+  opacity: 0;
+}

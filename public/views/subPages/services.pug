@@ -1,5 +1,10 @@
-div.tabcontent#services-page
-  .main-text.column
-    .title.mobile External Services
-    video(width="480" height="360" control)
-      source(src=cloudVid[0])
+div.tabcontent#services-page(onclick="playVid()")
+  video(width="100%" height="auto" autoplay)
+    source(src=cloudVid[0])
+  script.
+    function playVid(){
+      $('#services-page video').get(0).play();
+    }
+
+    
+    

@@ -1,11 +1,12 @@
 $(document).ready( function(){
   var link = location.hash
-  var subTabs = ['#home', '#destinations', '#vacation', '#offers', '#service', '#partners', '#privacy', '#faq', '#about'];
+  var subTabs = ['#home', '#destinations', '#vacation', '#offers', '#services', '#partners', '#privacy', '#faq', '#about'];
 
   if(location.pathname == '/'){
     setTimeout(function(){
         if(subTabs.indexOf(link) > -1){
           $(`[data-value=${link.substring(1)}]`).eq(0)[0].click();
+
         }else{
           setTimeout(openTab, 1000);
         }
@@ -35,7 +36,13 @@ $(document).ready( function(){
     }
     $('body').removeClass(`${leavePage}Page`);
     $('body').addClass(`${pageName}Page`);
+    var validPages = ['home', 'about'];
 
+    if(validPages.indexOf(pageName) < 0){
+      $('body').addClass("error404");
+    }else{
+      $('body').removeClass("error404");
+    }
     if(location.pathname != '/'){
       window.location = `/#${pageName}`
     }
@@ -44,6 +51,7 @@ $(document).ready( function(){
     // if($(window).width() < 769){
     //   $(window).scrollTop(0);
     // }
+
   });
 
   $('body').on('click', '.open-popup', function () {
