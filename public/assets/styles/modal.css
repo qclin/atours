@@ -60,6 +60,14 @@
 .modal-content img.banner{
   width: 100%;
 }
+
+.modal-content img.half{
+  width: 48%;
+}
+
+.modal-content img.half:nth-of-type(3){
+  margin-left: 1em;
+}
 .north-east{
   top: -1.3125em;
   right: -1.3125em;
