@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var modal = $('#news-modal')
 
-  $('#breaking').click(function(){
+  $('.breaking-news').click(function(){
     $('#news-modal').show();
     $('.blurBack').show();
     $('body').addClass('modal-open');

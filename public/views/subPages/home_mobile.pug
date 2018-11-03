@@ -1,0 +1,54 @@
+.mobile
+  .column
+    .announcement
+      .breaking-news#breaking
+        span.preview-tag Breaking <br/> News 
+        .title Dear Art Lovers...
+        a READ LETTER HERE
+      div.frame.drop
+    .stamps.flag
+      img.accent-md(src="./images/stamps/American-Flag.gif") 
+      
+    marquee.clickbait.box(direction="left" behavior="alternate")
+      div BIENNALES- SAVE UP TO 10% <br/> TRIENNALES SAVE UP TO 15% <br/> FESTIVALS DISCOUNTS 5%
+      img#red-arrow.accent-md(src="./images/stamps/3dred.png")
+    
+    div.oval#sleeper1
+      img(src="./images/stock/sleeper1.jpg")
+        
+    
+    each article, key in dbEntries
+      .destination-item
+        span.fuzz.green
+        span.preview-tag #{article.place}
+        - var previewUrls = DestPreviews.filter(img => img.indexOf(key) > -1); 
+        img.prevew-image(src=previewUrls[0])
+        a.preview-text(href=`destinations/${key}`)
+          .title #{article.title}
+          .author #{article.author}
+          - var snippetText = article.bodyText[0].substring(0, 80)
+          p #{snippetText} (+)
+    div.padded
+      button.subscribe.rainbow-wrapper subscribe
+
+    .cancellation-posters
+      - var cancellations = GCATGImages.filter(img => img.indexOf('CANCEL_FLIGHTS') > -1);     
+      img#cancelled(src=cancellations[0])
+      - var n = 0;
+      while n < 4
+        div.frame.drop= n++
+      
+    .destination-tbas.wide
+      span.fuzz.blue
+      span.tba-tag NEW <br/> DESTINATION <br/> TBA
+      .tba-image-wrapper
+        img.tba-image(src=tbaMedia[1])
+      .tba-holder
+    
+    .stamps.stacked
+      .ovalTall
+        .tallInside
+      div.fragile
+        img.accent-md(src="./images/stamps/fragile.png")
+        span.safe STAY SAFE: DON’T GO ANYWHERE!
+  

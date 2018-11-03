@@ -9,16 +9,40 @@
   box-shadow: -3px 3px 6px 0 rgba(0, 0, 0, 0.5);
 }
 #text-wrapper{
-  max-width: 1024px; 
-  width: 80%;
   box-sizing: border-box;
   margin: 0 auto;
   margin-top: 1em;
-  padding: 60px 120px;
-  height: 72vh;
-  overflow: scroll;
-  background: #fff;
-  box-shadow: 0 2px 4px 0 #00000080;
+}
+
+#projectPage .image-wrapper{
+  width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+  #text-wrapper{
+    padding: 60px 25px;
+  }
+
+}
+
+
+@media (min-width: 768px) {
+  #projectPage .image-wrapper{
+    height: 380px;
+    overflow: hidden;
+    vertical-align: center;
+    margin-bottom: 60px;
+    margin-top: 30px;
+  }
+  #text-wrapper{
+    max-width: 1024px;
+    padding: 60px 120px;
+    height: 72vh;
+    overflow: scroll;
+    width: 80%;
+    box-shadow: 0 2px 4px 0 #00000080;
+    background: #fff;
+  }
 }
 #scatterPlot{
   z-index: -9;
@@ -80,14 +104,7 @@ span.locationTag{
 .full-location-tag{
   float: right;
 }
-#projectPage .image-wrapper{
-  height: 380px;
-  width: 100%;
-  overflow: hidden;
-  vertical-align: center;
-  margin-bottom: 60px;
-  margin-top: 30px;
-}
+
 
 #projectPage .image-wrapper img{
   width: 100%;

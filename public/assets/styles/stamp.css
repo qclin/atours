@@ -117,10 +117,13 @@ span.safe{
   margin: 3em auto;
 }
 
-.stacked{
-  position: relative;
+
+.desktop .stacked{
   height: 300px;
   left: -5em;
+}
+.stacked{
+  position: relative;
 }
 
 .stacked .ovalTall,
@@ -146,4 +149,22 @@ span.safe{
   margin: 3em;
   margin-left: 13em;
   width: 2.625em
+}
+
+.fuzz{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 0;
+  top: -75px;
+  z-index: 2;
+}
+.blue{
+  background-image: radial-gradient(#00e5ff, #ffffff00 50%);
+}
+.green{
+  background-image: radial-gradient(#00ff30, #ffffff00 50%);
+}
+.yellow{
+  background-image: radial-gradient(#fff800, #ffffff00 50%);
 }

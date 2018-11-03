@@ -6,7 +6,6 @@
 form#booking{
   float: left;
   width: 150px;
-  display: inline-block;
   object-fit: contain;
   color: #000;
   /* background-image: linear-gradient(to bottom, #ffffff, #d8d8d8); */

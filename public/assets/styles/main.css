@@ -497,10 +497,9 @@ img#cancelled{
 
 .announcement div.frame.drop{
   top: 7px;
-  left: -7px;
-  height: 130px;
+  height: 145px;
   position: absolute;
-  width: 330px;
+  width: 300px;
   box-shadow: inset 0 0 5px 6px #00f0ff47;
   border: solid 1px #535353;
   background-color: #ffffff;
@@ -512,6 +511,7 @@ img#cancelled{
   border: solid 1px #535353;
   background-color: #ffffff;
   box-sizing: border-box;
+  margin: 2em;
 }
 .hide{
   display: none;
@@ -520,6 +520,16 @@ img#cancelled{
 #breaking{
    cursor: pointer;
    position: relative;
+}
+
+#breaking span.preview-tag{
+  z-index: 1;
+}
+#breaking span.preview-tag:hover{
+  color: #f00;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 .tug{
   z-index: -1;
