@@ -5,7 +5,7 @@
         span.preview-tag Breaking <br/> News 
         .title Dear Art Lovers...
         a READ LETTER HERE
-      div.frame.drop
+        .frame.drop
     .stamps.flag
       img.accent-md(src="./images/stamps/American-Flag.gif") 
       
@@ -22,12 +22,13 @@
         span.fuzz.green
         span.preview-tag #{article.place}
         - var previewUrls = DestPreviews.filter(img => img.indexOf(key) > -1); 
-        img.prevew-image(src=previewUrls[0])
-        a.preview-text(href=`destinations/${key}`)
-          .title #{article.title}
-          .author #{article.author}
-          - var snippetText = article.bodyText[0].substring(0, 80)
-          p #{snippetText} (+)
+        a(href=`destinations/${key}`)
+          img.prevew-image(src=previewUrls[0])
+          .preview-text(href=`destinations/${key}`)
+            .title #{article.title}
+            .author #{article.author}
+            - var snippetText = article.bodyText[0].substring(0, 80)
+            p #{snippetText} (+)
     div.padded
       button.subscribe.rainbow-wrapper subscribe
 

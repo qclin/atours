@@ -134,7 +134,7 @@ p{
     line-height: 20px;
 }
 
-.address, 
+.address,
 p.block{
   font-family: 'AcuminPro-Regular';
   font-size: 12px;
@@ -184,7 +184,7 @@ form{
   color: #00f;
 }
 
-.preview-text .title,
+
 .preview-text .author,
 .breaking-news .title{
   font-family: 'AcuminPro-Regular';
@@ -192,7 +192,14 @@ form{
   letter-spacing: 0.1px;
   margin: 0;
   white-space: nowrap;
+}
 
+.preview-text .title{
+  font-family: 'AcuminPro-Bold';
+  font-size: 40px;
+  letter-spacing: 0.1px;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .clickbait{
@@ -210,9 +217,13 @@ form{
   line-height: 40px;
   font-weight: 300;
   text-shadow: -2px 2px 4px #00000080;
-  position: absolute;
   color: #fff;
+  position: absolute;
+  top: -1em;
+  left: -3em;
+  z-index: -1;
 }
+
 
 .modal-text p,
 #about-page .main-text{
@@ -223,7 +234,7 @@ form{
   box-shadow: 0 2px 4px 0 rgba(0 0 0, 0.5);
   background-color: #ffffff;
 }
-
+span.destination-tag,
 span.preview-tag,
 span.tba-tag{
   font-family: 'AcuminPro-BoldItalic';

@@ -17,10 +17,14 @@
   position: fixed;
   right: 0;
 } */
+#news-modal span.preview-tag{
+  color: #f00;
+  left: 0;
+  top: -2em;
+}
+
 .modal span.preview-tag{
-  top: 12%;
-  left: 20%;
-  z-index: -1;
+  z-index: 2;
 }
 .modal {
     display: none; /* Hidden by default */
@@ -48,7 +52,6 @@
     box-shadow: 0 2px 4px 0 #00000080;
     background-color: #fefefe;
     margin: 11% auto;
-    width: 80%;
     max-width: 650px;
     position: relative;
     padding: 25px;
@@ -97,7 +100,8 @@
 
 @media (min-width: 320px) and (max-width: 767px){
   .modal-content {
-    height: 72vh;
+    /* height: 72vh; */
+    margin: 1em;
     margin-top: 15vh;
   }
   .modal span.preview-tag{

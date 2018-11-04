@@ -20,10 +20,10 @@ html
         a(href="/") 
             img(src="../icons/GCATG-3-Light Blue.svg")
     header.logo-wrapper.mobile 
-        a(href="/") 
-            img(src="../icons/GCATG-3-Light Blue.svg")
+        .divider
     include ../partials/nav.pug
     .row
+      span.destination-tag #{article.place}
       //- .backDrop
       //-   img(src=visuals[0])
       //-   .backDropBlur(style="")

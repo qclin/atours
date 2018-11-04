@@ -9,6 +9,15 @@
   .desktop{
     display: none;
   }
+
+  .tilt-title{
+    z-index: 1;
+    left: 0;
+    top: -3.5em;
+  }
+  #about-page .main-text {
+    margin-top: 8em !important;
+  }
 }
 
 

@@ -1,3 +1,6 @@
+#projectPage .logo-wrapper.mobile{
+
+}
 #image-wrapper{
   height: 100vh;
   overflow: scroll;
@@ -10,8 +13,9 @@
 }
 #text-wrapper{
   box-sizing: border-box;
-  margin: 0 auto;
-  margin-top: 1em;
+  margin: 1em;
+  box-shadow: 0 2px 4px 0 #00000080;
+  background: #fff;
 }
 
 #projectPage .image-wrapper{
@@ -21,8 +25,8 @@
 @media (min-width: 320px) and (max-width: 767px){
   #text-wrapper{
     padding: 60px 25px;
+    margin-top: 4em;
   }
-
 }
 
 
@@ -35,6 +39,7 @@
     margin-top: 30px;
   }
   #text-wrapper{
+    margin: 2em auto; 
     max-width: 1024px;
     padding: 60px 120px;
     height: 72vh;

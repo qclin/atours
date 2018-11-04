@@ -169,7 +169,7 @@ a:hover{
 }
 
 footer{
-  z-index: 8;
+  z-index: 12;
   position: fixed;
   bottom: 0;
   color: #e10000;
@@ -390,6 +390,7 @@ div.frame:nth-of-type(2){
   transform: rotate(180deg) skewx(-30deg);
 }
 
+span.destination-tag,
 span.preview-tag,
 span.tba-tag{
   transform: rotate(-12deg);
@@ -421,6 +422,16 @@ a:hover h1{
   height: 350px;
   z-index: 1;
 }
+
+@media (min-width: 320px) and (max-width: 767px){
+  .destination-item,
+  .destination-tbas{
+    width: 80%;
+    max-width: 300px;
+    margin: auto;
+  }
+}
+
 
 img.prevew-image,
 .tba-image-wrapper{
@@ -497,6 +508,7 @@ img#cancelled{
 
 .announcement div.frame.drop{
   top: 7px;
+  left: -7px;
   height: 145px;
   position: absolute;
   width: 300px;
@@ -506,12 +518,14 @@ img#cancelled{
 }
 
 .breaking-news{
+  margin: 2em auto;
+  max-width: 300px;
   padding: 3em 20px 1em 20px;
   box-shadow: inset 0 0 5px 6px #00f0ff47;
   border: solid 1px #535353;
   background-color: #ffffff;
   box-sizing: border-box;
-  margin: 2em;
+  /* margin: 2em; */
 }
 .hide{
   display: none;
@@ -543,9 +557,13 @@ img#cancelled{
   backdrop-filter: blur(10px);
 }
 #about-page .main-text{
-  margin: 6% auto;
-  padding: 25px;
+  position: relative;
+  margin: 1em auto;
+  padding: 60px 25px;
+  box-shadow: 0 2px 3px 0 #00000080;
 }
+
+
 
 .aboutPage{
   background-image: radial-gradient(circle at 50% 50%, #00cfff, #c1c1c100 65%);
