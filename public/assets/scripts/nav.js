@@ -1,6 +1,6 @@
 $(document).ready( function(){
   var link = location.hash
-  var subTabs = ['#home', '#destinations', '#vacation', '#offers', '#services', '#partners', '#privacy', '#faq', '#about'];
+  var subTabs = ['#home', '#destinations', '#offers', '#services', '#privacy', '#about'];
 
   if(location.pathname == '/'){
     setTimeout(function(){
@@ -52,6 +52,9 @@ $(document).ready( function(){
     //   $(window).scrollTop(0);
     // }
 
+    if(pageName == 'privacy'){
+      $('#radar')[0].src = "http://www.flightradar24.com/simple_index.php?lat=50.8503&lon=4.3517&z=8"
+    }
   });
 
   $('body').on('click', '.open-popup', function () {

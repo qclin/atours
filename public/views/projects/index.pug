@@ -32,10 +32,10 @@ html
           img(src=url)
       #backDrop
         #ovalGlow
-      //- #image-wrapper
-        //- span.locationTag #{ article.place}
-        //- each url in visuals
-        //-   img(src=url)
+        //- #image-wrapper
+          //- span.locationTag #{ article.place}
+          //- each url in visuals
+          //-   img(src=url)
       #text-wrapper
         .metatag 
           - var parsedDate = new Date(article.publish_date)
@@ -56,6 +56,10 @@ html
               img(src=visuals[counter])
             .hide=counter++
           p #{para} 
+      #share-wrapper
+        a(href="mailto:?subject=Editorial%20-%20Journal%20%2394%20October%202018%20-%20Editorial%20-%20Journal%20%2394%20October%202018%20-%20e-flux&amp;body=Hi%20there%2C%20%0A%0A%0AI%27ve%20just%20spotted%20this%20interesting%20article%20on%20e-flux%2C%20which%20I%20want%20to%20share%20this%20with%20you%3A%20http%3A%2F%2Fwww.e-flux.com%2Fjournal%2F94%2F221791%2Feditorial%2F%20%0A%0A%0A") Email
+        a(href="https://www.facebook.com/sharer/sharer.php?u=http%3A//global-contemporaryart-tours.art/destinations/Costa-Rica_Bratton_Future") Facebook 
+        a(href="https://twitter.com/home?status=GCATC%20travels%20to%20Costa%20Rica%20http%3A//global-contemporaryart-tours.art/destinations/Costa-Rica_Bratton_Future") Twitter 
       footer
       script.
         var parsedUrls = !{JSON.stringify(visuals)}

@@ -1,16 +1,18 @@
 div.tabcontent#destinations-page
-  .main-text.column
-    .title.mobile Destinations 
-    p Destinations
     #destination-posters
-      .column.poster
-        img.tilt.u-max-full-width(src="/images/Symbols/VeniceFall.jpg")
-        p.poster-text.top-offset It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
-      .column.poster
-        img.tilt.u-max-full-width(src="/images/Symbols/VeniceFall.jpg")
-        p.poster-text.left-offset  when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially
-      .column.poster
-        img.tilt.u-max-full-width(src="/images/Symbols/safetycard2.jpg")
-        p.poster-text.right-offset Where can I get some? There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which
+      each article, key in dbEntries
+        .destination-item
+          span.preview-tag #{article.place}
+          - var previewUrls = DestPreviews.filter(img => img.indexOf(key) > -1); 
+          a(href=`destinations/${key}`)
+            .listView-text
+              .title #{article.title}
+              .author #{article.author}
+              - var snippetText = article.bodyText[0].substring(0, 200)
+              p #{snippetText} (+)
+    .cancellation-series
+      - var cancellations = GCATGImages.filter(img => img.indexOf('CANCEL_FLIGHTS') > -1);     
+      each item in cancellations
+        img(src=item)
 
     script(type='text/javascript', src='/scripts/destinations.js')

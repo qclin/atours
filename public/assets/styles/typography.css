@@ -144,7 +144,7 @@ p.block{
     font-family: 'AcuminPro-Regular';
     font-size: 18px;
     line-height: 24px;
-    letter-spacing: .5px;
+    /* letter-spacing: .5px; */
 
 }
 caption, footer, .error-message{
@@ -158,16 +158,11 @@ form{
   line-height: 20px;
 }
 
-.preview-text h1{
-  font-family: 'AcuminPro-Regular';
-  font-size: 20px;
-  font-weight: normal;
-}
-
 .breaking-news a,
 .preview-text p{
   font-size: 15px;
-  letter-spacing: 0.4px;
+  line-height: 20px;
+  /* letter-spacing: 0.4px; */
   color: #4a4a4a;
 }
 
@@ -184,20 +179,22 @@ form{
   color: #00f;
 }
 
-
+.listView-text .author,
 .preview-text .author,
 .breaking-news .title{
   font-family: 'AcuminPro-Regular';
   font-size: 40px;
-  letter-spacing: 0.1px;
+  line-height: 40px;
+  /* letter-spacing: 0.1px; */
   margin: 0;
   white-space: nowrap;
 }
 
+.listView-text .title,
 .preview-text .title{
   font-family: 'AcuminPro-Bold';
   font-size: 40px;
-  letter-spacing: 0.1px;
+  /* letter-spacing: 0.1px; */
   margin: 0;
   white-space: nowrap;
 }
@@ -228,9 +225,9 @@ form{
 .modal-text p,
 #about-page .main-text{
   font-family: 'AcuminPro-Regular';
-  font-size: 1.3em;
-  line-height: 30px;
-  letter-spacing: 0.1px;
+  font-size: 20px;
+  line-height: 24px;
+  /* letter-spacing: 0.1px; */
   box-shadow: 0 2px 4px 0 rgba(0 0 0, 0.5);
   background-color: #ffffff;
 }
@@ -239,9 +236,9 @@ span.preview-tag,
 span.tba-tag{
   font-family: 'AcuminPro-BoldItalic';
   font-size: 40px;
+  line-height: 40px;
   text-shadow: 0 2px 4px #00000080;
   letter-spacing: 0.6px;
-  line-height: 40px;
 }
 
 #projectPage .metatag{
@@ -258,12 +255,14 @@ span.tba-tag{
 #projectPage .title{
   font-family: 'AcuminPro-Bold';
   font-size: 40px;
+  line-height: 40px;
   letter-spacing: 0.3px;
   color: #4a4a4a;
 }
 #projectPage .author{
   font-family: 'AcuminPro-ExtraLight';
   font-size: 40px;
+  line-height: 40px;
   letter-spacing: 0.3px;
   color: #4a4a4a;
 }

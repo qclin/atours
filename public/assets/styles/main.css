@@ -421,8 +421,12 @@ a:hover h1{
   margin-top: 4em;
   height: 350px;
   z-index: 1;
+  height: inherit;
 }
 
+#destination-posters .destination-item{
+  max-width: 400px;
+}
 @media (min-width: 320px) and (max-width: 767px){
   .destination-item,
   .destination-tbas{
@@ -593,4 +597,31 @@ body.error404 header{
   width: calc(100% - 200px);
   left: 200px;
   position: relative;
+}
+
+#privacy-page,
+#offers-page{
+  text-align: center;
+}
+
+#radar{
+  box-shadow: inset 3px 3px 7px 1px #00000080;
+}
+
+#destinations-page .cancellation-series img{
+  width: 15%;
+  box-shadow: -2px 2px 3px 0 #00000080;
+  margin: 2em;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  /* position: fixed; */
+  cursor: wait;
+}
+#destinations-page .cancellation-series img:hover{
+  transform: rotateY(1e-07deg) rotateX(0deg) rotateZ(0deg) scale(1.1);
+}
+
+.cancellation-series{
+  overflow: auto;
+  white-space: nowrap;
 }
