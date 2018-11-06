@@ -28,7 +28,7 @@
   top: -100px;
 }
 #sleeper1{
-  margin:3em auto;
+  margin:5em auto;
 }
 #sleeper2{
   float: right;
@@ -48,7 +48,7 @@
    background-image: radial-gradient(circle at 50% 50%, #d8fc00, #ffffff86);
    border-radius: 50%;
    position: relative;
-   margin: 0 auto;
+   margin: 5em auto 8em auto;
 }
 
 div.ovalFlat img{
@@ -114,7 +114,7 @@ span.safe{
   text-align: center;
 }
 .flag img {
-  margin: 3em auto;
+  margin: 5em auto;
 }
 
 
